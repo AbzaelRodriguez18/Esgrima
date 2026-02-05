@@ -98,7 +98,8 @@ fun App() {
             ) { innerPadding ->
                 Surface(modifier = Modifier.padding(innerPadding)) {
                     when (pantallaActual) {
-                        Pantalla.Login -> { /* No hacer nada, se muestra fuera del Scaffold*/ }
+                        Pantalla.Login -> {
+                        }
                         Pantalla.Configuracion -> ConfiguracionCompeticionScreen(competicion.value)
                         Pantalla.Tiradores -> GestionTiradoresScreen(competicion.value.tiradores)
                         Pantalla.Arbitros -> GestionArbitrosScreen(competicion.value.arbitros)

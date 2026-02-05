@@ -122,8 +122,7 @@ fun generarPoules(competicion: Competicion, configuracion: ConfiguracionPoule) {
     configuracion.distribucion.forEachIndexed { i, tamano ->
         val tiradoresPoule = tiradoresMezclados.subList(indice, indice + tamano)
         val nuevaPoule = Poule(i + 1, tiradoresPoule.toList())
-        
-        // Generar asaltos inmediatamente
+
         for (idx1 in 0 until tiradoresPoule.size) {
             for (idx2 in idx1 + 1 until tiradoresPoule.size) {
                 nuevaPoule.asaltos.add(Asalto(tiradoresPoule[idx1], tiradoresPoule[idx2]))

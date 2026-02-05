@@ -17,8 +17,6 @@ fun GestionTiradoresScreen(tiradores: MutableList<Tirador>) {
     var nombre by remember { mutableStateOf("") }
     var club by remember { mutableStateOf("") }
     var licencia by remember { mutableStateOf("") }
-    
-    // Usamos un State para forzar la recomposición cuando cambia la lista mutable
     var listaActualizada by remember { mutableStateOf(0) }
 
     Column(

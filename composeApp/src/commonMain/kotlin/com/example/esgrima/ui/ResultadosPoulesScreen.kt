@@ -36,7 +36,6 @@ fun ResultadosPoulesScreen(competicion: Competicion) {
                     Spacer(modifier = Modifier.height(12.dp))
 
                     poule.asaltos.forEach { asalto ->
-                        // Sincronización directa con el modelo reactivo
                         Row(
                             modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically

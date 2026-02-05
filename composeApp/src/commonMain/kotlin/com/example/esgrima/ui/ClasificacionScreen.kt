@@ -67,7 +67,6 @@ fun calcularClasificacion(competicion: Competicion): List<ResultadoTirador> {
     competicion.poules.forEach { poule ->
         poule.asaltos.forEach { asalto ->
             if (asalto.terminado || (asalto.tocados1 > 0 || asalto.tocados2 > 0)) {
-                // Tirador 1
                 val res1 = mapaResultados.getOrPut(asalto.tirador1.id) { ResultadoTirador(asalto.tirador1, 0, 0, 0, 0) }
                 mapaResultados[asalto.tirador1.id] = res1.copy(
                     victorias = res1.victorias + (if (asalto.tocados1 > asalto.tocados2) 1 else 0),
@@ -76,7 +75,6 @@ fun calcularClasificacion(competicion: Competicion): List<ResultadoTirador> {
                     recibidos = res1.recibidos + asalto.tocados2
                 )
 
-                // Tirador 2
                 val res2 = mapaResultados.getOrPut(asalto.tirador2.id) { ResultadoTirador(asalto.tirador2, 0, 0, 0, 0) }
                 mapaResultados[asalto.tirador2.id] = res2.copy(
                     victorias = res2.victorias + (if (asalto.tocados2 > asalto.tocados1) 1 else 0),

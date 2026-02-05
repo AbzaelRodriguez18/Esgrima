@@ -19,7 +19,7 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Esgrima Pro", style = MaterialTheme.typography.headlineLarge, color = MaterialTheme.colorScheme.primary)
+        Text("Esgrima", style = MaterialTheme.typography.headlineLarge, color = MaterialTheme.colorScheme.primary)
         Spacer(modifier = Modifier.height(32.dp))
         
         OutlinedTextField(
@@ -45,7 +45,6 @@ fun LoginScreen(onLoginSuccess: () -> Unit) {
         
         Button(
             onClick = {
-                // Simulación de login para el prototipo
                 if (usuario.isNotBlank() && password.isNotBlank()) {
                     onLoginSuccess()
                 } else {
